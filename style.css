@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'daytimes';
+    src: url('Daytimes.ttf');
+}
+@font-face {
+    font-family: 'antipasto';
+    src: url('AntipastoPro_trial.ttf');
+}
+@font-face {
+    font-family: 'antibold';
+    src: url('AntipastoPro-Bold_trial.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+   html ,body{
+    height: 100%;
+    width: 100%;
+  } 
+  
+  #page1{
+    width: 100%;
+    height: 100%;
+    
+  }
+  #page2{
+    width: 100%;
+    height: 100%;
+    padding-top: 6vw;
+   
+    
+  }
+  #page3{
+    width: 100%;
+    height: 80%;
+    
+  }
+  #page4{
+    width: 100%;
+    height: 100%;
+    
+  }
+ 
+ 
+  progress[value] {
+    --color:  /* the progress color */
+      /* if < 30% "red" */
+      linear-gradient(red   0 0) 0 /calc(var(--w)*.3 - 100%) 1px,
+      /* if < 60% "orange" */
+      linear-gradient(orange 0 0) 0 /calc(var(--w)*.6 - 100%) 1px,
+      /* else "green" */
+      green;
+    --background: lightgrey; /* the background color */
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--background);
+    transform: rotate(-90deg);
+    -webkit-mask: radial-gradient(#0000 60%,#000 60% 70%,#0000 71%)
+  }
+  progress[value]::-webkit-progress-bar {
+    background: var(--background);
+  }
+  progress[value]::-webkit-progress-value {
+    background: var(--color);
+  }
+  progress[value]::-moz-progress-bar {
+    background: var(--color);
+  }
+  
+  label {
+    --w: 150px; /* the width*/
+    
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-grid;
+    place-content: center;
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+  }
+  
